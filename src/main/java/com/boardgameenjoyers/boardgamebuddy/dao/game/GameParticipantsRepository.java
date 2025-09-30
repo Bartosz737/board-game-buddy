@@ -20,5 +20,6 @@ public interface GameParticipantsRepository extends JpaRepository<GameParticipan
 
     List<GameParticipants> findGameEntriesByUser(User user);
 
+    long countByUserProfileUserId(Long userId);
 
 }

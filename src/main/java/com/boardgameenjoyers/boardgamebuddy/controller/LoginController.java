@@ -1,6 +1,7 @@
 package com.boardgameenjoyers.boardgamebuddy.controller;
 
 import com.boardgameenjoyers.boardgamebuddy.security.JwtUtil;
+import com.boardgameenjoyers.boardgamebuddy.service.user.RegistrationService;
 import com.boardgameenjoyers.boardgamebuddy.service.user.UserCredentials;
 import com.boardgameenjoyers.boardgamebuddy.service.response.LoginResponseDTO;
 import com.boardgameenjoyers.boardgamebuddy.service.user.LoginService;
@@ -23,10 +24,11 @@ public class LoginController {
     private final LoginService loginService;
     private final JwtUtil jwtUtil;
     private final AuthenticationManager authenticationManager;
+    private final RegistrationService registrationService;
 
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody UserDTO userDTO) {
-        loginService.register(userDTO);
+        registrationService.register(userDTO);
         return ResponseEntity.ok("User registered successfully");
     }
 

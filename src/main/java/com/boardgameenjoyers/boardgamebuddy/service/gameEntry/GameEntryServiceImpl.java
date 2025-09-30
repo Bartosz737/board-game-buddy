@@ -39,6 +39,7 @@ public class GameEntryServiceImpl implements GameEntryService {
     private final UserRepository userRepository;
     private final GameEntryMapper gameEntryMapper;
 
+
     @Override
     @Transactional
     public void deleteGameEntryById(Long gameEntryId) {

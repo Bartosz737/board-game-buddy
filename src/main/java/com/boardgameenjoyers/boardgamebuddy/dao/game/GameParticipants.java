@@ -2,6 +2,7 @@ package com.boardgameenjoyers.boardgamebuddy.dao.game;
 
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.gameEntry.GameEntry;
+import com.boardgameenjoyers.boardgamebuddy.dao.user.UserProfile;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -39,4 +40,8 @@ public class GameParticipants {
     @ManyToOne
     @JoinColumn(name = "USER_ID")
     private User user;
+
+    @ManyToOne
+    @JoinColumn(name = "USER_PROFILE_ID")
+    private UserProfile userProfile;
 }
