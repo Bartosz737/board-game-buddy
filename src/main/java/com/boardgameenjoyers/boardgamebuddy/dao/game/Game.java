@@ -43,6 +43,7 @@ public class Game {
     @Column(name = "AGE")
     private Integer age;
 
+
     public Game(Long id, String gameTitle, String description, Integer minPlayers, Integer maxPLayers, Integer age, Integer gameTime) {
         this.id = id;
         this.gameTitle = gameTitle;

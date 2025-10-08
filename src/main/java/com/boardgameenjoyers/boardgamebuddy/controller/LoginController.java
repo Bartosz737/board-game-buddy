@@ -34,7 +34,7 @@ public class LoginController {
 
     @PostMapping("/register/admin")
     public ResponseEntity<String> registerAdmin(@RequestBody RegisterAdminRequest request) {
-        loginService.registerAdmin(request);
+        registrationService.registerAdmin(request);
         return ResponseEntity.ok("Admin registered successfully");
     }
 

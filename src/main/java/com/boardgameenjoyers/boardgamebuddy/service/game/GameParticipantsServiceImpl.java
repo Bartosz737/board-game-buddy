@@ -8,6 +8,7 @@ import com.boardgameenjoyers.boardgamebuddy.dao.game.GameParticipants;
 import com.boardgameenjoyers.boardgamebuddy.dao.group.GroupParticipants;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.service.event.GameParticipantAddedEvent;
+import com.boardgameenjoyers.boardgamebuddy.service.event.GameParticipantRemoveEvent;
 import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameParticipantToGameEntryRequest;
 import com.boardgameenjoyers.boardgamebuddy.util.EntityOwnershipChecker;
 import lombok.RequiredArgsConstructor;
@@ -45,7 +46,7 @@ public class GameParticipantsServiceImpl implements GameParticipantsService {
         gameParticipant.setGameEntry(gameEntry);
         gameParticipantsRepository.save(gameParticipant);
 
-        applicationEventPublisher.publishEvent(new GameParticipantAddedEvent(user.getId()));
+        applicationEventPublisher.publishEvent(new GameParticipantAddedEvent(groupParticipant.getUser().getId()));
     }
 
     @Override
@@ -54,6 +55,7 @@ public class GameParticipantsServiceImpl implements GameParticipantsService {
                 .orElseThrow(() -> new EntityNotFoundException("Participant not found"));
 
         gameParticipantsRepository.delete(participants);
+        applicationEventPublisher.publishEvent(new GameParticipantRemoveEvent(participants.getUser().getId()));
     }
 
     private void validateGameEntryOwner(GameEntry gameEntry) {

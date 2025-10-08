@@ -4,6 +4,7 @@ package com.boardgameenjoyers.boardgamebuddy.service.user;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserProfile;
 import com.boardgameenjoyers.boardgamebuddy.service.event.GameParticipantAddedEvent;
+import com.boardgameenjoyers.boardgamebuddy.service.event.GameParticipantRemoveEvent;
 
 public interface UserProfileService {
 
@@ -14,4 +15,6 @@ public interface UserProfileService {
     void updateProfileForUser(Long userId, UserProfileDTO userProfileDTO);
 
     void incrementGamesPlayed(GameParticipantAddedEvent event);
+
+    void decrementGamesPlayed(GameParticipantRemoveEvent event);
 }

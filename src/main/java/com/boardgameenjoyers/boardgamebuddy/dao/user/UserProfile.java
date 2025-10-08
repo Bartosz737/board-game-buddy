@@ -1,13 +1,11 @@
 package com.boardgameenjoyers.boardgamebuddy.dao.user;
 
-import com.boardgameenjoyers.boardgamebuddy.dao.game.GameParticipants;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Getter
 @Setter
@@ -33,7 +31,4 @@ public class UserProfile {
 
     @Column(name = "GAMES_PLAYED")
     private long gamesPlayed = 0L;
-
-    @OneToMany(mappedBy = "userProfile", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<GameParticipants> gameParticipants;
 }

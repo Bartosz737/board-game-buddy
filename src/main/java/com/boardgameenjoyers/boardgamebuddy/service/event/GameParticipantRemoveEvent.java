@@ -1,4 +1,4 @@
 package com.boardgameenjoyers.boardgamebuddy.service.event;
 
-public record GameParticipantAddedEvent(Long userId) {
+public record GameParticipantRemoveEvent(Long userId) {
 }

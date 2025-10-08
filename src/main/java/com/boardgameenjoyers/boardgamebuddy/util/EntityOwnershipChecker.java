@@ -12,9 +12,17 @@ public class EntityOwnershipChecker {
 
     public boolean isCurrentUserOwner(String createdBy) {
         String currentUsername = applicationUser.getUserDetails().getUsername();
-        if(currentUsername == null){
+        if (currentUsername == null) {
             throw new IllegalStateException("Current user is not authenticated or username is null.");
         }
         return currentUsername.equals(createdBy);
+    }
+
+    public boolean isCurrentUserOwnerOfUserProfile(String username) {
+        String currentUsername = applicationUser.getUserDetails().getUsername();
+        if (currentUsername == null) {
+            throw new IllegalStateException("Current user is not authenticated or username is null.");
+        }
+        return currentUsername.equals(username);
     }
 }
