@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface GameScoreService {
 
-    void addScore(GameScoreRequest gameScoreRequest, String username);
+    void addScore(Long gameId, int rating);
 
     void removeScore(Long gameId, String username);
 

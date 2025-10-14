@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.gameController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.gameScore.GameScoreDTO;
 import com.boardgameenjoyers.boardgamebuddy.service.gameScore.GameScoreService;
@@ -20,10 +20,9 @@ public class GameScoreController {
     private final GameScoreService gameScoreService;
     private final CurrentUserService currentUserService;
 
-    @PostMapping("/score")
-    public ResponseEntity<GameScoreRequest> addScore(@RequestBody GameScoreRequest gameScoreRequest) {
-        String username = currentUserService.getUsername();
-        gameScoreService.addScore(gameScoreRequest, username);
+    @PostMapping("/{gameId}/score")
+    public ResponseEntity<Void> addScore(@PathVariable Long gameId, @RequestBody GameScoreRequest gameScoreRequest) {
+        gameScoreService.addScore(gameId, gameScoreRequest.getRating());
         return ResponseEntity.ok().build();
     }
 

@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.userController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGamesResponse;
@@ -22,14 +22,16 @@ public class UserFavoriteGamesController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<List<AddGameToUserFavoriteListRequest>> addGameToUserFavoriteList(@RequestBody AddGameToUserFavoriteListRequest addGameToUserFavoriteListRequest) {
+    public ResponseEntity<List<AddGameToUserFavoriteListRequest>>
+    addGameToUserFavoriteList(@RequestBody AddGameToUserFavoriteListRequest addGameToUserFavoriteListRequest) {
         userFavoriteGamesService.addGameToUserFavoriteList(addGameToUserFavoriteListRequest);
         return ResponseEntity.ok().build();
     }
+
     @DeleteMapping("/{gameId}")
-    public ResponseEntity<?> removeGameFromUserFavoriteList(@PathVariable long gameId){
+    public ResponseEntity<?> removeGameFromUserFavoriteList(@PathVariable long gameId) {
         userFavoriteGamesService.removeGameFromUserFavoriteList(gameId);
-        return  ResponseEntity.ok().build();
+        return ResponseEntity.ok().build();
     }
 
 }

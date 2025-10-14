@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.gameCategoryController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.gameCategory.GameCategoryService;
 import com.boardgameenjoyers.boardgamebuddy.service.gameCategory.GameCategoryDTO;

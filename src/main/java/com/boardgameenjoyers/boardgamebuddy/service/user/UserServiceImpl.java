@@ -2,9 +2,7 @@ package com.boardgameenjoyers.boardgamebuddy.service.user;
 
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
-import com.boardgameenjoyers.boardgamebuddy.security.UserRole;
 import lombok.AllArgsConstructor;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;

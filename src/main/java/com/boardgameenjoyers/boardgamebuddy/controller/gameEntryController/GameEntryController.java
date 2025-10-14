@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.gameEntryController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.gameEntry.*;
 import com.boardgameenjoyers.boardgamebuddy.service.request.CreateGameEntryRequest;
@@ -57,9 +57,8 @@ public class GameEntryController {
     }
 
     @GetMapping("user/{userName}")
-    public ResponseEntity<List<GameEntryWhichUserParticipated>> getGameEntriesByUser() {
-        String username = currentUserService.getUsername();
-        List<GameEntryWhichUserParticipated> gameEntries = gameEntryService.findAllGameEntriesByUserByOrderCreatedDesc(username);
+    public ResponseEntity<List<GameEntryWhichUserParticipated>> getGameEntriesByUser(@PathVariable String userName) {
+        List<GameEntryWhichUserParticipated> gameEntries = gameEntryService.findAllGameEntriesByUserByOrderCreatedDesc(userName);
         return ResponseEntity.ok(gameEntries);
     }
 }

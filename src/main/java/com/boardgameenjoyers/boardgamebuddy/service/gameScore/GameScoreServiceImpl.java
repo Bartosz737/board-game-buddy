@@ -11,10 +11,14 @@ import com.boardgameenjoyers.boardgamebuddy.service.request.GameScoreRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.user.UserScoreDTO;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import javax.transaction.Transactional;
+import java.nio.file.AccessDeniedException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -29,25 +33,28 @@ public class GameScoreServiceImpl implements GameScoreService {
 
     @Override
     @Transactional
-    public void addScore(GameScoreRequest gameScoreRequest, String username) {
-        Game game = gameRepository.findById(gameScoreRequest.getGameId()).
+    public void addScore(Long gameId, int rating) {
+
+        String currentUsername = getCurrentUsername();
+
+        Game game = gameRepository.findById(gameId).
                 orElseThrow(() -> new EntityNotFoundException("Game not found"));
 
-        User user = userRepository.findByUserName(gameScoreRequest.getUsername()).
+        User user = userRepository.findByUserName(currentUsername).
                 orElseThrow(() -> new EntityNotFoundException("User not found"));
 
         Optional<GameScore> existingUserScore = gameScoreRepository.
-                findByGameIdAndUserUserName(gameScoreRequest.getGameId(), gameScoreRequest.getUsername());
+                findByGameIdAndUserUserName(gameId, currentUsername);
 
         if (existingUserScore.isEmpty()) {
             GameScore newScore = existingUserScore.orElse(new GameScore());
             newScore.setGame(game);
             newScore.setUser(user);
-            newScore.setRating(gameScoreRequest.getRating());
+            newScore.setRating(rating);
             gameScoreRepository.save(newScore);
         } else {
             GameScore score = existingUserScore.get();
-            if (gameScoreRequest.getRating() == score.getRating()) {
+            if (rating == score.getRating()) {
                 throw new AlreadyScoreExistsException("You scored this game already");
             } else {
                 throw new IllegalArgumentException("You need to remove your score first");
@@ -88,5 +95,9 @@ public class GameScoreServiceImpl implements GameScoreService {
     @Override
     public List<TopGameScoreDTO> getTopFiveGames() {
         return gameScoreRepository.findTop5GamesByAverageRating(PageRequest.of(0, 5));
+    }
+
+    private String getCurrentUsername() {
+        return SecurityContextHolder.getContext().getAuthentication().getName();
     }
 }

@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.gameEntryController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.game.GameParticipantsService;
 import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameParticipantToGameEntryRequest;

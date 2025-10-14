@@ -5,7 +5,6 @@ import com.boardgameenjoyers.boardgamebuddy.dao.game.GameRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.*;
 import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGamesResponse;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
@@ -301,11 +300,6 @@ class UserFavoriteGamesServiceTest {
         Long userId = 1L;
         Long gameId = 100L;
 
-        User user = new User();
-        user.setId(userId);
-
-        Game game = new Game();
-        game.setId(gameId);
         doReturn(userId).when(userFavoriteGamesServiceImpl).getCurrentUserId();
         when(userFavoriteGamesRepository.findByUserIdAndGameId(userId, gameId)).thenReturn(Optional.empty());
 

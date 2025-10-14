@@ -97,5 +97,4 @@ public class UserFavoriteGamesServiceImpl implements UserFavoriteGamesService {
         return userRepository.findIdByUsername(username)
                 .orElseThrow(() -> new EntityNotFoundException("User not found username: " + username));
     }
-
 }

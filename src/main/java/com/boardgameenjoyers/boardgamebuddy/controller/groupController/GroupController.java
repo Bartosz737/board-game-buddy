@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.groupController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.group.*;
 import com.boardgameenjoyers.boardgamebuddy.service.user.CurrentUserService;

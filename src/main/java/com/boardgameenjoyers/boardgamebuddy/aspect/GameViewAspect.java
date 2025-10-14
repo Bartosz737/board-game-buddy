@@ -14,7 +14,7 @@ public class GameViewAspect {
     private final GameViewService gameViewService;
 
     @AfterReturning(
-            pointcut = "execution(* com.boardgameenjoyers.boardgamebuddy.controller.GameController.getGame(..)) && args(gameId)",
+            pointcut = "execution(* com.boardgameenjoyers.boardgamebuddy.controller.gameController.GameController.getGame(..)) && args(gameId)",
             returning = "response"
     )
     public void countGameView(Long gameId, Object response) {

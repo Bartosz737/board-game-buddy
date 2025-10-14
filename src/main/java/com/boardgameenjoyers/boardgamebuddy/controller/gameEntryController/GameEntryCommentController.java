@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.controller;
+package com.boardgameenjoyers.boardgamebuddy.controller.gameEntryController;
 
 import com.boardgameenjoyers.boardgamebuddy.service.gameEntry.GameEntryCommentService;
 import com.boardgameenjoyers.boardgamebuddy.service.gameEntry.GameEntryCommentDTS;

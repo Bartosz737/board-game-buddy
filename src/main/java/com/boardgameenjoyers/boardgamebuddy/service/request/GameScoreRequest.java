@@ -7,8 +7,5 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 public class GameScoreRequest {
-
-    private Long gameId;
-    private String username;
     private int rating;
 }

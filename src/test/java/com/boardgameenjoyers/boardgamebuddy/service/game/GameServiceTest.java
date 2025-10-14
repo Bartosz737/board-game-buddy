@@ -7,7 +7,6 @@ import com.boardgameenjoyers.boardgamebuddy.dao.gameEntry.GameEntryRepository;
 import com.boardgameenjoyers.boardgamebuddy.security.UserRole;
 import com.boardgameenjoyers.boardgamebuddy.service.request.GamesPlayedPerMonth;
 import com.boardgameenjoyers.boardgamebuddy.service.user.ApplicationUser;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;

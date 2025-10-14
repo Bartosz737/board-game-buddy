@@ -17,6 +17,7 @@ public class RegistrationServiceImpl implements RegistrationService {
     private final UserProfileService userProfileService;
     private final LoginService loginService;
     private final UserFavoriteGamesService userFavoriteGamesService;
+    private final UserFavoriteGameCategoryService userFavoriteGameCategoryService;
 
     @Override
     @Transactional
@@ -27,7 +28,7 @@ public class RegistrationServiceImpl implements RegistrationService {
 
         userProfileService.createProfileForUser(user);
         userFavoriteGamesService.createUserFavoriteGamesList(user);
-
+        userFavoriteGameCategoryService.createUserFavoriteGameCategoryList(user);
         return user;
     }
 
