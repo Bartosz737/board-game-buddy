@@ -4,7 +4,7 @@ import com.boardgameenjoyers.boardgamebuddy.dao.BugReport.BugReport;
 import com.boardgameenjoyers.boardgamebuddy.dao.BugReport.BugReportRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserRepository;
-import com.boardgameenjoyers.boardgamebuddy.service.request.BugReportRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest.BugReportRequest;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 

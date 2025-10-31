@@ -2,7 +2,7 @@ package com.boardgameenjoyers.boardgamebuddy.service.user;
 
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserRepository;
-import com.boardgameenjoyers.boardgamebuddy.service.request.RegisterAdminRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest.RegisterAdminRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

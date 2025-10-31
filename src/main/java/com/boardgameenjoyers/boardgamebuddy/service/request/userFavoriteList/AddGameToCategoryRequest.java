@@ -1,8 +1,6 @@
-package com.boardgameenjoyers.boardgamebuddy.service.request;
+package com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList;
 
 import lombok.*;
-
-import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor

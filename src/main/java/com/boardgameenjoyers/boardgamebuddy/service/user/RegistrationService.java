@@ -1,7 +1,7 @@
 package com.boardgameenjoyers.boardgamebuddy.service.user;
 
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
-import com.boardgameenjoyers.boardgamebuddy.service.request.RegisterAdminRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest.RegisterAdminRequest;
 
 public interface RegistrationService {
     User register(UserDTO userDTO);

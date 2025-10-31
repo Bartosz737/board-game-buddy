@@ -1,6 +1,6 @@
 package com.boardgameenjoyers.boardgamebuddy.service.gameEntry;
 
-import com.boardgameenjoyers.boardgamebuddy.service.game.GameParticipantsDts;
+import com.boardgameenjoyers.boardgamebuddy.service.game.gameParticipants.GameParticipantsDts;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 

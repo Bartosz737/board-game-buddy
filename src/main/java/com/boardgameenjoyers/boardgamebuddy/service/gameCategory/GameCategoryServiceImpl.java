@@ -8,7 +8,7 @@ import com.boardgameenjoyers.boardgamebuddy.dao.gameCategory.GameCategory;
 import com.boardgameenjoyers.boardgamebuddy.dao.gameCategory.GameCategoryLink;
 import com.boardgameenjoyers.boardgamebuddy.security.UserRole;
 import com.boardgameenjoyers.boardgamebuddy.service.user.ApplicationUser;
-import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameToCategoryRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList.AddGameToCategoryRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.request.CreateGameCategoryRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.AccessDeniedException;

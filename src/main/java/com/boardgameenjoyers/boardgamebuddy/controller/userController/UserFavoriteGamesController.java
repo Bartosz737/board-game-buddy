@@ -1,6 +1,6 @@
 package com.boardgameenjoyers.boardgamebuddy.controller.userController;
 
-import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameToUserFavoriteListRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList.AddGameToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGamesResponse;
 import com.boardgameenjoyers.boardgamebuddy.service.user.UserFavoriteGamesService;
 import lombok.RequiredArgsConstructor;

@@ -3,7 +3,7 @@ package com.boardgameenjoyers.boardgamebuddy.service.user;
 import com.boardgameenjoyers.boardgamebuddy.dao.gameCategory.GameCategory;
 import com.boardgameenjoyers.boardgamebuddy.dao.gameCategory.GameCategoryRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.*;
-import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameCategoryToUserFavoriteListRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList.AddGameCategoryToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGameCategoryResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;

@@ -3,7 +3,7 @@ package com.boardgameenjoyers.boardgamebuddy.service.user;
 import com.boardgameenjoyers.boardgamebuddy.dao.game.Game;
 import com.boardgameenjoyers.boardgamebuddy.dao.game.GameRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.*;
-import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameToUserFavoriteListRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList.AddGameToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGamesResponse;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

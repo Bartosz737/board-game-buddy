@@ -10,10 +10,10 @@ import com.boardgameenjoyers.boardgamebuddy.dao.group.Group;
 import com.boardgameenjoyers.boardgamebuddy.dao.group.GroupRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserRepository;
-import com.boardgameenjoyers.boardgamebuddy.service.game.GameParticipantsDts;
+import com.boardgameenjoyers.boardgamebuddy.service.game.gameParticipants.GameParticipantsDts;
 import com.boardgameenjoyers.boardgamebuddy.service.request.CreateGameEntryRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.request.EditGameEntryRequest;
-import com.boardgameenjoyers.boardgamebuddy.service.request.GameEntryWhichUserParticipated;
+import com.boardgameenjoyers.boardgamebuddy.service.request.gameParticipantRequest.GameEntryWhichUserParticipated;
 import com.boardgameenjoyers.boardgamebuddy.util.EntityOwnershipChecker;
 import com.boardgameenjoyers.boardgamebuddy.service.user.UserMapper;
 import lombok.RequiredArgsConstructor;
@@ -99,6 +99,7 @@ public class GameEntryServiceImpl implements GameEntryService {
                 .description(createGameEntryRequest.getDescription())
                 .game(game)
                 .group(group)
+                .gameType(createGameEntryRequest.getGameType())
                 .created(LocalDateTime.now())
                 .build();
 

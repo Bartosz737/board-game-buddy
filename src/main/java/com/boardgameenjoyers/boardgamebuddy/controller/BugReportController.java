@@ -1,7 +1,7 @@
 package com.boardgameenjoyers.boardgamebuddy.controller;
 
 import com.boardgameenjoyers.boardgamebuddy.service.bugReport.BugReportService;
-import com.boardgameenjoyers.boardgamebuddy.service.request.BugReportRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest.BugReportRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.BugReportResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

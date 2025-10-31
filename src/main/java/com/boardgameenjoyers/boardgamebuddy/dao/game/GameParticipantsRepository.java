@@ -22,4 +22,5 @@ public interface GameParticipantsRepository extends JpaRepository<GameParticipan
 
     long countByUserProfileUserId(Long userId);
 
+    boolean existsByGameEntryIdAndUserId(Long gameEntryId, Long userId);
 }

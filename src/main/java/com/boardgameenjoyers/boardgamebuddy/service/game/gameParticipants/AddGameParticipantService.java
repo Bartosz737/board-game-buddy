@@ -1,0 +1,13 @@
+package com.boardgameenjoyers.boardgamebuddy.service.game.gameParticipants;
+
+import com.boardgameenjoyers.boardgamebuddy.service.request.gameParticipantRequest.AddGameParticipantToCooperativeGameEntryRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.gameParticipantRequest.AddGameParticipantToGameEntryNoPointsRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.gameParticipantRequest.AddGameParticipantToGameEntryWithPointsRequest;
+
+public interface AddGameParticipantService {
+    void addGameParticipantWithPoints(AddGameParticipantToGameEntryWithPointsRequest request, Long gameEntryId);
+
+    void addGameParticipantNoPoints(AddGameParticipantToGameEntryNoPointsRequest request, Long gameEntryId);
+
+    void addGameParticipantCooperative(AddGameParticipantToCooperativeGameEntryRequest request, Long gameEntryId);
+}

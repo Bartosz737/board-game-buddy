@@ -1,6 +1,6 @@
 package com.boardgameenjoyers.boardgamebuddy.service.user;
 
-import com.boardgameenjoyers.boardgamebuddy.service.request.RegisterAdminRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest.RegisterAdminRequest;
 
 import java.util.Set;
 

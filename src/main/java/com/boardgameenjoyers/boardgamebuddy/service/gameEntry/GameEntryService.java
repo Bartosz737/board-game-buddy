@@ -1,9 +1,9 @@
 package com.boardgameenjoyers.boardgamebuddy.service.gameEntry;
 
-import com.boardgameenjoyers.boardgamebuddy.service.game.GameParticipantsDts;
+import com.boardgameenjoyers.boardgamebuddy.service.game.gameParticipants.GameParticipantsDts;
 import com.boardgameenjoyers.boardgamebuddy.service.request.CreateGameEntryRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.request.EditGameEntryRequest;
-import com.boardgameenjoyers.boardgamebuddy.service.request.GameEntryWhichUserParticipated;
+import com.boardgameenjoyers.boardgamebuddy.service.request.gameParticipantRequest.GameEntryWhichUserParticipated;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 

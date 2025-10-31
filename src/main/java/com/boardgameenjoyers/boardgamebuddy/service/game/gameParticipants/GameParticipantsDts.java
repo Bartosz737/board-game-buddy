@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.service.game;
+package com.boardgameenjoyers.boardgamebuddy.service.game.gameParticipants;
 
 import com.boardgameenjoyers.boardgamebuddy.service.user.UserDTS;
 import lombok.Value;

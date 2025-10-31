@@ -6,7 +6,7 @@ import com.boardgameenjoyers.boardgamebuddy.service.user.UserCredentials;
 import com.boardgameenjoyers.boardgamebuddy.service.response.LoginResponseDTO;
 import com.boardgameenjoyers.boardgamebuddy.service.user.LoginService;
 import com.boardgameenjoyers.boardgamebuddy.service.user.UserDTO;
-import com.boardgameenjoyers.boardgamebuddy.service.request.RegisterAdminRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest.RegisterAdminRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

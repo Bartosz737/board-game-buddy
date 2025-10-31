@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.service.request;
+package com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

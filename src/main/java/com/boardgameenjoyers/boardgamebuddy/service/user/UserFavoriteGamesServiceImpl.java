@@ -6,7 +6,7 @@ import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserFavoriteGames;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserFavoriteGamesRepository;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserRepository;
-import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameToUserFavoriteListRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList.AddGameToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGamesResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;

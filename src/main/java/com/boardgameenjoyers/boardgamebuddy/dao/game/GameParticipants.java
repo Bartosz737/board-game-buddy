@@ -1,5 +1,6 @@
 package com.boardgameenjoyers.boardgamebuddy.dao.game;
 
+import com.boardgameenjoyers.boardgamebuddy.dao.enums.TeamOutcome;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
 import com.boardgameenjoyers.boardgamebuddy.dao.gameEntry.GameEntry;
 import com.boardgameenjoyers.boardgamebuddy.dao.user.UserProfile;
@@ -8,14 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Id;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Column;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
+import javax.persistence.*;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -32,6 +26,10 @@ public class GameParticipants {
 
     @Column(name = "POINT")
     private Long point;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "TEAM_OUTCOME")
+    private TeamOutcome teamOutcome;
 
     @ManyToOne
     @JoinColumn(name = "GAME_ENTRY_ID")

@@ -1,7 +1,7 @@
 package com.boardgameenjoyers.boardgamebuddy.service.user;
 
 import com.boardgameenjoyers.boardgamebuddy.dao.user.User;
-import com.boardgameenjoyers.boardgamebuddy.service.request.AddGameCategoryToUserFavoriteListRequest;
+import com.boardgameenjoyers.boardgamebuddy.service.request.userFavoriteList.AddGameCategoryToUserFavoriteListRequest;
 import com.boardgameenjoyers.boardgamebuddy.service.response.UserFavoriteGameCategoryResponse;
 
 import java.util.List;

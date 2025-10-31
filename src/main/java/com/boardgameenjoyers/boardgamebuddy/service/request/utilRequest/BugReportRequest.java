@@ -1,4 +1,4 @@
-package com.boardgameenjoyers.boardgamebuddy.service.request;
+package com.boardgameenjoyers.boardgamebuddy.service.request.utilRequest;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,6 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class AddGameCategoryToUserFavoriteListRequest {
-    private Long gameCategoryId;
+public class BugReportRequest {
+
+    private String text;
 }
